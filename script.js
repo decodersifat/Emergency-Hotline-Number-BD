@@ -26,6 +26,11 @@ copybtnList.forEach(function (copybtn, index) {
     copybtn.addEventListener('click', function () {
         copyCount++;
         document.getElementById('copy-btn-text').innerText = copyCount;
+        var copyHotline = document.querySelectorAll('#number')[index].innerText;
+        var copyHotlineTitle = document.querySelectorAll('#title')[index].innerText;
+        var copyString = `✅ Copied ${copyHotlineTitle} : ${copyHotline} Hotline number`;
+        navigator.clipboard.writeText(copyHotline);
+        alert(copyString);
         
     });
 });
