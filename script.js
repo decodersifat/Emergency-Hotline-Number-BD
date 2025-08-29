@@ -108,6 +108,7 @@ document.getElementById('clearbtn').addEventListener('click', function(){
     if(Number(document.getElementById('callCredit').innerText) == 0){
         alert('🪙 You got 40 Credit as a bonus for Clearing the history !!!');
         document.getElementById('callCredit').innerText = Number(document.getElementById('callCredit').innerText) + 40;
+callCredit =+ 40
     }
 })
 
