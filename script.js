@@ -2,8 +2,6 @@ var callCredit = 100;
 var deduductCallCredit = 20;
 var copyCount = 0;
 var heartCount = 0;
-var title ='hi';
-var Contactnumber = '';
 var heartbtnList = document.querySelectorAll('#card-heart-icon');
 var heartText = Number(document.getElementById('heart-count').innerText);
 var currentDate = Date.now();
@@ -61,7 +59,7 @@ callbtn.forEach(function (singlebtn, index) {
 
 
         } else {
-            alert('You don\'t have enough credit left!');
+            alert('❌ You don\'t have enough credit left! Please buy credit to use this feature.');
         }
     });
 });
@@ -107,6 +105,10 @@ function historys(title, number){
 
 document.getElementById('clearbtn').addEventListener('click', function(){
     document.getElementById('historyItem').innerHTML = '';
+    if(Number(document.getElementById('callCredit').innerText) == 0){
+        alert('🪙 You got 40 Credit as a bonus for Clearing the history !!!');
+        document.getElementById('callCredit').innerText = Number(document.getElementById('callCredit').innerText) + 40;
+    }
 })
 
 
