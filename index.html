@@ -11,25 +11,32 @@
 
 <body class="bg-[#F5FFF6] ">
     <header>
-        <nav class="fixed top-0 left-0 w-full h-20 flex items-center justify-between px-4 bg-white shadow-md z-50">
+        <nav
+            class="fixed top-0 left-0 w-full h-16 sm:h-20 flex items-center justify-between px-3 sm:px-6 bg-white shadow-md z-50">
+
             <div class="flex items-center gap-2">
-                <img class="h-10 w-10" src="./assets/logo.png" alt="Logo">
-                <span class="text-[#006747] font-bold leading-tight">
+                <img class="h-8 w-8 sm:h-10 sm:w-10" src="./assets/logo.png" alt="Logo">
+                <span class="text-[#006747] font-bold leading-tight text-sm sm:text-base">
                     Emergency <br> Service
                 </span>
             </div>
 
-            <div class="flex gap-3">
-                <button class="bg-[#41FF6B]/15 w-20 h-10 rounded-3xl flex items-center justify-center gap-1 font-bold">
+            <div class="flex gap-2 sm:gap-3">
+
+                <button
+                    class="bg-[#41FF6B]/15 w-16 h-8 sm:w-20 sm:h-10 rounded-3xl flex items-center justify-center gap-1 font-bold text-xs sm:text-sm">
                     <span id='heart-count'>0</span>
-                    <img class="h-6 w-6" src="./assets/heart.png" alt="heart">
+                    <img class="h-5 w-5 sm:h-6 sm:w-6" src="./assets/heart.png" alt="heart">
                 </button>
-                <button class="bg-[#41FF6B]/15 w-20 h-10 rounded-3xl flex items-center justify-center gap-1 font-bold">
+
+                <button
+                    class="bg-[#41FF6B]/15 w-16 h-8 sm:w-20 sm:h-10 rounded-3xl flex items-center justify-center gap-1 font-bold text-xs sm:text-sm">
                     <span id="callCredit">0</span>
-                    <img class="h-6 w-6" src="./assets/coin.png" alt="coin">
+                    <img class="h-5 w-5 sm:h-6 sm:w-6" src="./assets/coin.png" alt="coin">
                 </button>
+
                 <button id="copy-btn"
-                    class="bg-[#049e25] w-20 h-10 rounded-3xl flex items-center text-white text-sm justify-center gap-1 font-bold">
+                    class="bg-[#049e25] w-16 h-8 sm:w-20 sm:h-10 rounded-3xl flex items-center text-white justify-center gap-1 font-bold text-xs sm:text-sm">
                     <span id="copy-btn-text">2</span>
                     <span>Copy</span>
                 </button>
@@ -38,14 +45,16 @@
     </header>
 
 
-    <section id="banner" class="h-52 mt-20 w-full flex flex-col gap-2 items-center justify-center 
-          bg-[linear-gradient(to_right,#006747_0%,#013223_50%,#006747_100%)] text-white">
 
-        <img class="size-20" src="./assets/logo-dark.png" alt="Logo">
+    <section id="banner" class="mt-16 h-56 w-full flex flex-col items-center justify-center gap-2 
+           bg-[linear-gradient(to_right,#006747_0%,#013223_50%,#006747_100%)] 
+           text-white text-center p-4">
 
-        <h1 class="font-bold text-xl">Emergency Service Directory</h1>
+        <img class="w-16 h-16 sm:w-20 sm:h-20" src="./assets/logo-dark.png" alt="Logo">
 
-        <p>
+        <h1 class="font-bold text-lg sm:text-xl">Emergency Service Directory</h1>
+
+        <p class="text-sm sm:text-base max-w-xs sm:max-w-md">
             Government Emergency Services at Your Fingertip –
             A Project by Government of the People’s Republic of Bangladesh
         </p>
@@ -53,12 +62,13 @@
 
     <main class="p-6 w-full h-full grid grid-cols-1 lg:grid-cols-4 gap-6">
 
-        <div class="h-full w-full order-1 lg:order-none lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div
+            class="h-full w-full order-1 lg:order-none lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
 
             <div class="bg-white rounded-xl shadow-md p-4 flex flex-col gap-3">
                 <div class="flex justify-between items-center">
-                    <img class="size-10" src="./assets/ambulance.png" alt="Emergency">
+                    <img class="bg-[#FFE3E2] rounded-lg p-2 size-11" src="./assets/ambulance.png" alt="Emergency">
                     <img id="card-heart-icon"
                         class="size-6 cursor-pointer transform transition-transform duration-200 hover:scale-110"
                         src="./assets/Outline-heart.png" alt="Favorite">
@@ -97,7 +107,7 @@
 
             <div class="bg-white rounded-xl shadow-md p-4 flex flex-col gap-3">
                 <div class="flex justify-between items-center">
-                    <img class="size-10" src="./assets/police.png" alt="Emergency">
+                    <img class="bg-[#e2e2ff] rounded-lg p-2 size-11" src="./assets/police.png" alt="Emergency">
                     <img id="card-heart-icon"
                         class="size-6 cursor-pointer transform transition-transform duration-200 hover:scale-110"
                         src="./assets/Outline-heart.png" alt="Favorite">
@@ -136,7 +146,7 @@
 
             <div class="bg-white rounded-xl shadow-md p-4 flex flex-col gap-3">
                 <div class="flex justify-between items-center">
-                    <img class="size-10" src="./assets/fire-service.png" alt="Emergency">
+                    <img class="bg-[#FFE3E2] rounded-lg p-2 size-11" src="./assets/fire-service.png" alt="Emergency">
                     <img id="card-heart-icon"
                         class="size-6 cursor-pointer transform transition-transform duration-200 hover:scale-110"
                         src="./assets/Outline-heart.png" alt="Favorite">
@@ -178,7 +188,7 @@
 
             <div class="bg-white rounded-xl shadow-md p-4 flex flex-col gap-3">
                 <div class="flex justify-between items-center">
-                    <img class="size-10" src="./assets/ambulance.png" alt="Emergency">
+                    <img class="bg-[#FFE3E2] rounded-lg p-2 size-11" src="./assets/ambulance.png" alt="Emergency">
                     <img id="card-heart-icon"
                         class="size-6 cursor-pointer transform transition-transform duration-200 hover:scale-110"
                         src="./assets/Outline-heart.png" alt="Favorite">
@@ -219,7 +229,7 @@
 
             <div class="bg-white rounded-xl shadow-md p-4 flex flex-col gap-3">
                 <div class="flex justify-between items-center">
-                    <img class="size-10" src="./assets/ambulance.png" alt="Emergency">
+                    <img class="bg-[#FFE3E2] rounded-lg p-2 size-11" src="./assets/ambulance.png" alt="Emergency">
                     <img id="card-heart-icon"
                         class="size-6 cursor-pointer transform transition-transform duration-200 hover:scale-110"
                         src="./assets/Outline-heart.png" alt="Favorite">
@@ -259,7 +269,7 @@
 
             <div class="bg-white rounded-xl shadow-md p-4 flex flex-col gap-3">
                 <div class="flex justify-between items-center">
-                    <img class="size-10" src="./assets/ambulance.png" alt="Emergency">
+                    <img class="bg-[#FFE3E2] rounded-lg p-2 size-11" src="./assets/ambulance.png" alt="Emergency">
                     <img id="card-heart-icon"
                         class="size-6 cursor-pointer transform transition-transform duration-200 hover:scale-110"
                         src="./assets/Outline-heart.png" alt="Favorite">
@@ -296,9 +306,10 @@
 
             <div class="bg-white rounded-xl shadow-md p-4 flex flex-col gap-3">
                 <div class="flex justify-between items-center">
-                    <img class="size-10" src="./assets/ambulance.png" alt="Emergency">
-                    <img class="size-6 cursor-pointer transform transition-transform duration-200 hover:scale-110"
-                        src="./assets/ambulance.png" alt="Favorite">
+                    <img class="bg-[#FFE3E2] rounded-lg p-2 size-11" src="./assets/emergency.png" alt="Emergency">
+                    <img id="card-heart-icon"
+                        class="size-6 cursor-pointer transform transition-transform duration-200 hover:scale-110"
+                        src="./assets/Outline-heart.png" alt="Favorite">
                 </div>
                 <div>
                     <h1 id="title" class="font-bold text-lg">Electricity Helpline</h1>
@@ -334,7 +345,7 @@
 
             <div class="bg-white rounded-xl shadow-md p-4 flex flex-col gap-3">
                 <div class="flex justify-between items-center">
-                    <img class="size-10" src="./assets/ambulance.png" alt="Emergency">
+                    <img class="bg-[#FFE3E2] rounded-lg p-2 size-11" src="./assets/brac.png" alt="Emergency">
                     <img id="card-heart-icon"
                         class="size-6 cursor-pointer transform transition-transform duration-200 hover:scale-110"
                         src="./assets/Outline-heart.png" alt="Favorite">
@@ -373,7 +384,8 @@
 
             <div class="bg-white rounded-xl shadow-md p-4 flex flex-col gap-3">
                 <div class="flex justify-between items-center">
-                    <img class="size-10" src="./assets/ambulance.png" alt="Emergency">
+                    <img class="bg-[#e2facc] rounded-lg p-2 size-11" src="./assets/Bangladesh-Railway.png"
+                        alt="Emergency">
                     <img id="card-heart-icon"
                         class="size-6 cursor-pointer transform transition-transform duration-200 hover:scale-110"
                         src="./assets/Outline-heart.png" alt="Favorite">
@@ -411,17 +423,16 @@
         </div>
 
         <div class="w-full bg-white p-2 order-2 lg:order-none lg:sticky lg:top-24">
-        <div class="flex justify-between items-center mb-2">
-            <div class="flex gap-2 items-center">
-                <img src="./assets/clock.png" alt="" class="h-6 w-6">
-                <h1 class="font-bold">History</h1>
+            <div class="flex justify-between items-center mb-2">
+                <div class="flex gap-2 items-center">
+                    <img src="./assets/clock.png" alt="" class="h-6 w-6">
+                    <h1 class="font-bold">History</h1>
+                </div>
+                <button id="clearbtn" class="bg-[#00A63E] text-white px-6 py-2 text-sm rounded-full">Clear</button>
             </div>
-            <button id="clearbtn"
-                class="bg-[#00A63E] text-white px-6 py-2 text-sm rounded-full">Clear</button>
-        </div>
 
-        <div id="historyItem" class="space-y-2"></div>
-    </div>
+            <div id="historyItem" class="space-y-2"></div>
+        </div>
     </main>
 
 

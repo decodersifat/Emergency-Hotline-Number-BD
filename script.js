@@ -55,18 +55,7 @@ callbtn.forEach(function (singlebtn, index) {
             title = document.querySelectorAll('#title')[index].innerText;
             Contactnumber = document.querySelectorAll('#number')[index].innerText;
 
-            // document.querySelectorAll('#title').forEach(function(singletitle){
-            //    title =  singletitle.innerText;
-            //    console.log( singletitle.innerText);
-            //    console.log(title)
-            // });
-
-            // document.querySelectorAll('#number').forEach(function(signlenumber){
-            //    Contactnumber =  signlenumber.innerText;
-            // });
-
-            console.log(title);
-            console.log(Contactnumber);
+            alert(`Calling ${title} : ${Contactnumber}`);
 
             historys(title, Contactnumber);
 
