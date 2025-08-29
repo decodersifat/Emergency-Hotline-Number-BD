@@ -54,7 +54,7 @@ document.querySelector("ul").addEventListener("click", (e) => {
 
 ```javascript
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  e.stopPropagation();
+  e.preventDefault(); // Stops submit
+  e.stopPropagation(); // Stops bubbling
 });
 ```
