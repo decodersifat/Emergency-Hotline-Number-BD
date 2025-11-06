@@ -2,17 +2,23 @@ var callCredit = 100;
 var deduductCallCredit = 20;
 var copyCount = 0;
 var heartCount = 0;
-var heartbtnList = document.querySelectorAll('#card-heart-icon');
-var heartText = Number(document.getElementById('heart-count').innerText);
-var currentDate = Date.now();
 
-var copyCountText = Number(document.getElementById('copy-btn-text').innerText);
-document.getElementById('copy-btn-text').innerText = copyCount;
+// Cache DOM elements to avoid repeated queries
+var heartbtnList = document.querySelectorAll('#card-heart-icon');
+var heartCountElement = document.getElementById('heart-count');
+var copyBtnTextElement = document.getElementById('copy-btn-text');
+var callCreditElement = document.getElementById('callCredit');
+var historyField = document.getElementById('historyItem');
+var titleElements = document.querySelectorAll('#title');
+var numberElements = document.querySelectorAll('#number');
+
+// Initialize copy count display
+copyBtnTextElement.innerText = copyCount;
 
 heartbtnList.forEach(function (heartbtn) {
     heartbtn.addEventListener('click', function () {
         heartCount++;
-        document.getElementById('heart-count').innerText = heartCount;
+        heartCountElement.innerText = heartCount;
     });
 });
 
@@ -20,16 +26,16 @@ var copybtnList = document.querySelectorAll('#card-copy-btn');
 copybtnList.forEach(function (copybtn, index) {
     copybtn.addEventListener('click', function () {
         copyCount++;
-        document.getElementById('copy-btn-text').innerText = copyCount;
-        var copyHotline = document.querySelectorAll('#number')[index].innerText;
-        var copyHotlineTitle = document.querySelectorAll('#title')[index].innerText;
+        copyBtnTextElement.innerText = copyCount;
+        var copyHotline = numberElements[index].innerText;
+        var copyHotlineTitle = titleElements[index].innerText;
         var copyString = `✅ Copied ${copyHotlineTitle} : ${copyHotline} Hotline number`;
         navigator.clipboard.writeText(copyHotline);
         alert(copyString);
     });
 });
 
-document.getElementById('callCredit').innerText = callCredit;
+callCreditElement.innerText = callCredit;
 var frontend_call_credit = callCredit;
 
 var callbtn = document.querySelectorAll('#card-call-btn');
@@ -38,10 +44,10 @@ callbtn.forEach(function (singlebtn, index) {
         if (frontend_call_credit >= deduductCallCredit) {
             frontend_call_credit -= deduductCallCredit;
             callCredit = frontend_call_credit;
-            document.getElementById('callCredit').innerText = frontend_call_credit;
+            callCreditElement.innerText = frontend_call_credit;
 
-            title = document.querySelectorAll('#title')[index].innerText;
-            Contactnumber = document.querySelectorAll('#number')[index].innerText;
+            var title = titleElements[index].innerText;
+            var Contactnumber = numberElements[index].innerText;
 
             alert(`Calling ${title} : ${Contactnumber}`);
             historys(title, Contactnumber);
@@ -50,8 +56,6 @@ callbtn.forEach(function (singlebtn, index) {
         }
     });
 });
-
-var historyField = document.getElementById('historyItem');
 
 function historys(title, number) {
     const now = new Date();
@@ -79,11 +83,11 @@ function historys(title, number) {
 }
 
 document.getElementById('clearbtn').addEventListener('click', function () {
-    document.getElementById('historyItem').innerHTML = '';
-    if (Number(document.getElementById('callCredit').innerText) == 0) {
+    historyField.innerHTML = '';
+    if (Number(callCreditElement.innerText) == 0) {
         alert('🪙 You got 40 Credit as a bonus for Clearing the history !!!');
         callCredit += 40;
         frontend_call_credit = callCredit;
-        document.getElementById('callCredit').innerText = callCredit;
+        callCreditElement.innerText = callCredit;
     }
 });
