@@ -84,7 +84,7 @@ function historys(title, number) {
 
 document.getElementById('clearbtn').addEventListener('click', function () {
     historyField.innerHTML = '';
-    if (Number(callCreditElement.innerText) == 0) {
+    if (Number(callCreditElement.innerText) === 0) {
         alert('🪙 You got 40 Credit as a bonus for Clearing the history !!!');
         callCredit += 40;
         frontend_call_credit = callCredit;
