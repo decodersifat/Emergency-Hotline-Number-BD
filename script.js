@@ -67,17 +67,26 @@ function historys(title, number) {
     });
 
     const historydiv = document.createElement('div');
-    historydiv.innerHTML = `
-    <div class="flex mt-2 rounded-lg items-center py-3 px-3 justify-between bg-gray-100">
-        <div>
-            <h1 class="font-bold text-sm">${title}</h1>
-            <p class="text-sm">${number}</p>
-        </div>
-        <div>
-            <p class="text-sm">${time}</p>
-        </div>
-    </div>
-    `;
+    historydiv.className = 'flex mt-2 rounded-lg items-center py-3 px-3 justify-between bg-gray-100';
+    
+    const leftDiv = document.createElement('div');
+    const titleElement = document.createElement('h1');
+    titleElement.className = 'font-bold text-sm';
+    titleElement.textContent = title;
+    const numberElement = document.createElement('p');
+    numberElement.className = 'text-sm';
+    numberElement.textContent = number;
+    leftDiv.appendChild(titleElement);
+    leftDiv.appendChild(numberElement);
+    
+    const rightDiv = document.createElement('div');
+    const timeElement = document.createElement('p');
+    timeElement.className = 'text-sm';
+    timeElement.textContent = time;
+    rightDiv.appendChild(timeElement);
+    
+    historydiv.appendChild(leftDiv);
+    historydiv.appendChild(rightDiv);
 
     historyField.appendChild(historydiv);
 }
